@@ -346,8 +346,8 @@
     <h2>Groupon Deals</h2>
     <ul class="project-list">
       <li>
-        <svg width="20" height="20" fill="#0f4c81" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-         <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/>
+        <svg width="20" height="20" fill="#0f4c81" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M9 3h6a6 6 0 1 1 0 12H12v6H9V3zm6 9a3 3 0 0 0 0-6H12v6h3z"/>
       </svg>
       <strong>Firstleaf</strong><br />
       <a href="https://www.groupon.com/deals/firstleaf-1" target="_blank" rel="noopener noreferrer">View Top-Tier US Subscription Deal</a>
@@ -400,7 +400,7 @@
       <strong>Phone:</strong> +91 9487067378
     </li>
     <li>
-      <strong>Location:</strong> India
+      <strong>Location:</strong> Tamil Nadu, India
     </li>
   </ul>
 </section>
@@ -410,12 +410,13 @@
   </footer>
 
   <script>
-    function toggleTheme() {
-      const root = document.documentElement;
-      const current = root.getAttribute("data-theme");
-      root.setAttribute("data-theme", current === "dark" ? "light" : "dark");
-    }
-  </script>
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    darkModeToggle.textContent =
+      document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+  });
+</script>
 
 </body>
 <!-- rebuild -->
